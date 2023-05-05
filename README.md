@@ -75,7 +75,7 @@ The above summary are the data quality issues discovered, mitigations and recomm
 
 This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary total of their recent transactions to identify the best customers and perform targeted marketing campaigns.
 
-*RFM Analysis:*
+# *RFM Analysis:*
 
 This analysis is used to evaluate customer behavior and identify different customer segments. It measures how recently a customer has interacted with a business.
 To combine the three datasets, I had to find a relationship that exist between the datasets. The customer_Id was used as a primary key since it’s a unique identifier.
@@ -151,4 +151,4 @@ By analyzing and combining these three dimensions, businesses can create custome
 
 Thank you for reading. I hope you find it more insightful.
 
-You can reach me on twitter (@pinnacle_paul)[https://twitter.com/pinnacle_paul] and on linkedIn (@Paul Aderounmu)[https://www.linkedin.com/in/pauladerounmu/]
+You can reach me on twitter [@pinnacle_paul](https://twitter.com/pinnacle_paul) and on linkedIn [@Paul Aderounmu](https://www.linkedin.com/in/pauladerounmu/)
