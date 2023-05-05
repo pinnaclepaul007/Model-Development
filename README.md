@@ -20,11 +20,11 @@ In building this recommendation, outline a detailed approach for completing the 
 This project was done using Microsoft Excel.
 To achieve my objectives, the following task was done:
 
-  # Data Collection
+  # *Data Collection*
 
   The datasets were provided by Sprocket Central Pty Ltd, and it contains four tables which are "CustomerDemographic", "CustomerAddress", "Transactions" and "NewCustomerList".
 
-  # Data Pre-processing:
+  # *Data Pre-processing:*
 
 A data framework was used to identify all data quality issues from the datasets provided. The table below shows some data quality issues that I discovered during my  assessment of the three datasets. The column header was used to fill in the data framework in relation to each datasset. I have also made some recommendation to improve the quality of the dataset for better analysis and good business decision-making.
 
