@@ -32,56 +32,41 @@ A data framework was used to identify all data quality issues from the datasets 
 
 The descriptions of data quality issues discovered, and the methods of mitigation used are briefly discussed below. In addition, recommendation and explanations are included to avoid further data quality issues in the future.
 
-* Accuracy
+1. *Accuracy
 
-	DOB was inaccurate for Customer Demographic, age column missing and profit column missing for Transactions.
+* DOB was inaccurate for Customer Demographic, age column missing and profit column missing for Transactions.
+* Mitigation: filter out outlier in DOB.
+* Recommendation: Create an age column to be able to check for errors. Create profit column in Transaction for accuracy of sales and it will assist in future monetary analysis.
 
-Mitigation: filter out outlier in DOB.
+2. *Incompleteness
 
-Recommendation: Create an age column to be able to check for errors. Create profit column in Transaction for accuracy of sales and it will assist in future monetary analysis.
+* Customer ID were inconsistent among Customer Demographic, Transaction and Customer Address.
+* Mitigation: Filter all customer ids from 1 – 3500. Filter out blank cells.
+* Recommendation: Customer ids from 1 to 3500 will be used for our data model as they contain complete data. Ensure complete data and double check data across all spreadsheets. Blanks are treated as incomplete data. Hence, they are removed to avoid skewing our analysis result.
 
-* Incompleteness
+3. *Consistency
 
-	Customer ID were inconsistent among Customer Demographic, Transaction and Customer Address.
+* Inconsistency in gender for Customer Demographic and Customer Address. Inconsistency in State for Customer Address.
+* Mitigation: Filter all ‘M’ to Male and all ‘F and Female’ to Female for Gender. Filter New South Wales to NSW and Victoria to VIC for State.
+* Recommendation: Create a dropdown option for state abbreviation. Create a dropdown option for gender.
 
-Mitigation: Filter all customer ids from 1 – 3500. Filter out blank cells
+4. *Currency
 
-Recommendation: Customer ids from 1 to 3500 will be used for our data model as they contain complete data. Ensure complete data and double check data across all spreadsheets.
-Blanks are treated as incomplete data. Hence, they are removed to avoid skewing our analysis result.
+* ‘Y’ customer in Deceased Indicator under Customer Demographic is not for current customer.
+* Mitigation: Filter out ‘Y’ in Deceased Indicator.
+* Recommendation: Deceased customers are not current customer, removing them will increase the efficiency and currency of the data and will improve the accuracy of our analysis. 
 
-* Consistency
+5. *Relevancy 
 
-	Inconsistency in gender for Customer Demographic and Customer Address.
+* Lack of relevancy for Default column in Customer Demographic.
+* Mitigation: Default column deleted.
+* Recommendation: Check and double check for irrelevant and incomprehensible data to be deleted or removed.
 
-	Inconsistency in State for Customer Address
+6. *Validity
 
-Mitigation: Filter all ‘M’ to Male and all ‘F and Female’ to Female for Gender. Filter New South Wales to NSW and Victoria to VIC for State.
-
-Recommendation: Create a dropdown option for state abbreviation. Create a dropdown option for gender.
-
-* Currency
-
-	‘Y’ customer in Deceased Indicator under Customer Demographic is not for current customer.
-
-Mitigation: Filter out ‘Y’ in Deceased Indicator
-
-Recommendation: Deceased customers are not current customer, removing them will increase the efficiency and currency of the data and will improve the accuracy of our analysis. 
-
-* Relevancy 
-
-	Lack of relevancy for Default column in Customer Demographic.
-
-Mitigation: Default column deleted
-
-Recommendation: Check and double check for irrelevant and incomprehensible data to be deleted or removed.
-
-* Validity
-
-	Format List price and Product first sold date in Transaction.
-
-Mitigation: Format (Data type) List_Price to currency and Product_first_sold_date to short date.
-
-Recommendation: Set up columns so that format or data types such as price or date are already in place when entering data.
+* Format List price and Product first sold date in Transaction.
+* Mitigation: Format (Data type) List_Price to currency and Product_first_sold_date to short date.
+* Recommendation: Set up columns so that format or data types such as price or date are already in place when entering data.
 
 The above summary are the data quality issues discovered, mitigations and recommendations. Taking all these into account will improve the quality our data and increase the efficiency of our analysis for good business decision-making. 
 
@@ -90,7 +75,7 @@ The above summary are the data quality issues discovered, mitigations and recomm
 
 This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary total of their recent transactions to identify the best customers and perform targeted marketing campaigns.
 
-*Recency: 
+* *Recency: 
 
 This dimension refers to the time elapsed since a customer's last purchase. It measures how recently a customer has interacted with a business.
 To combine the three datasets, I had to find a relationship that exist between the datasets. The customer_Id was used as a primary key since it’s a unique identifier.
