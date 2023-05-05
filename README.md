@@ -32,37 +32,37 @@ A data framework was used to identify all data quality issues from the datasets 
 
 The descriptions of data quality issues discovered, and the methods of mitigation used are briefly discussed below. In addition, recommendation and explanations are included to avoid further data quality issues in the future.
 
-1. *Accuracy*
+1. *Data Accuracy*
 
 * DOB was inaccurate for Customer Demographic, age column missing and profit column missing for Transactions.
 * Mitigation: filter out outlier in DOB.
 * Recommendation: Create an age column to be able to check for errors. Create profit column in Transaction for accuracy of sales and it will assist in future monetary analysis.
 
-2. # Incompleteness #
+2. *Data Incompleteness*
 
 * Customer ID were inconsistent among Customer Demographic, Transaction and Customer Address.
 * Mitigation: Filter all customer ids from 1 – 3500. Filter out blank cells.
 * Recommendation: Customer ids from 1 to 3500 will be used for our data model as they contain complete data. Ensure complete data and double check data across all spreadsheets. Blanks are treated as incomplete data. Hence, they are removed to avoid skewing our analysis result.
 
-3. *Consistency*
+3. *Data Consistency*
 
 * Inconsistency in gender for Customer Demographic and Customer Address. Inconsistency in State for Customer Address.
 * Mitigation: Filter all ‘M’ to Male and all ‘F and Female’ to Female for Gender. Filter New South Wales to NSW and Victoria to VIC for State.
 * Recommendation: Create a dropdown option for state abbreviation. Create a dropdown option for gender.
 
-4. *Currency*
+4. *Data Currency*
 
 * ‘Y’ customer in Deceased Indicator under Customer Demographic is not for current customer.
 * Mitigation: Filter out ‘Y’ in Deceased Indicator.
 * Recommendation: Deceased customers are not current customer, removing them will increase the efficiency and currency of the data and will improve the accuracy of our analysis. 
 
-5. *Relevancy*
+5. *Data Relevancy*
 
 * Lack of relevancy for Default column in Customer Demographic.
 * Mitigation: Default column deleted.
 * Recommendation: Check and double check for irrelevant and incomprehensible data to be deleted or removed.
 
-6. *Validity*
+6. *Data Validity*
 
 * Format List price and Product first sold date in Transaction.
 * Mitigation: Format (Data type) List_Price to currency and Product_first_sold_date to short date.
@@ -75,9 +75,9 @@ The above summary are the data quality issues discovered, mitigations and recomm
 
 This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary total of their recent transactions to identify the best customers and perform targeted marketing campaigns.
 
-* *Recency: 
+*RFM Analysis:*
 
-This dimension refers to the time elapsed since a customer's last purchase. It measures how recently a customer has interacted with a business.
+This analysis is used to evaluate customer behavior and identify different customer segments. It measures how recently a customer has interacted with a business.
 To combine the three datasets, I had to find a relationship that exist between the datasets. The customer_Id was used as a primary key since it’s a unique identifier.
 
 ![b1](https://user-images.githubusercontent.com/105908253/236502878-169dbf11-f4fe-4b33-b639-490b96400a5c.jpg)
