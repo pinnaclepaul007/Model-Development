@@ -73,7 +73,7 @@ The above summary are the data quality issues discovered, mitigations and recomm
 
 # MODEL DEVELOPMENT & ANALYSIS
 
-This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary total of their recent transactions to identify the best customers and perform targeted marketing campaigns.
+This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary value of their transactions. This is used to identify the best customers and perform targeted marketing campaigns.
 
 # *RFM Analysis:*
 
