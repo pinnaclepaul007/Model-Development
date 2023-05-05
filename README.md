@@ -32,7 +32,7 @@ A data framework was used to identify all data quality issues from the datasets 
 
 The descriptions of data quality issues discovered, and the methods of mitigation used are briefly discussed below. In addition, recommendation and explanations are included to avoid further data quality issues in the future.
 
-*Accuracy Issues
+* Accuracy Issues
 
 	DOB was inaccurate for Customer Demographic, age column missing and profit column missing for Transactions.
 
