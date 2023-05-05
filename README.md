@@ -11,22 +11,22 @@ Sprocket Central Pty Ltd is a medium-size bikes & cycling accessories organizati
 Sprocket Central Pty Ltd has given a new list of 1000 potential customers with their demographics and attributes. However, these customers do not have prior transaction history with the organization.
 The marketing team at Sprocket Central Pty Ltd is unsure that, if correctly analyzed, the data would reveal useful customer insights which could help optimize resource allocation for targeted marketing. Hence, improve performance by focusing on high value customers.
 
-#TASK:
+# TASK:
 Using the existing datasets (Customer demographic, customer address and transaction) as a labelled dataset, please recommend which of these 1000 new customers should be targeted to drive the most value for the organization. 
 In building this recommendation, outline a detailed approach for completing the analysis including: understanding the data distribution, feature engineering, data transformations, model development, and result interpretation.
 
-#ACTIONS:
+# ACTIONS:
 
 This project was done using Microsoft Excel.
 To achieve my objectives, the following task was done:
 
-#Data Collection
+  # Data Collection
 
-The datasets were provided by Sprocket Central Pty Ltd, and it contains four tables which are "CustomerDemographic", "CustomerAddress", "Transactions" and "NewCustomerList".
+  The datasets were provided by Sprocket Central Pty Ltd, and it contains four tables which are "CustomerDemographic", "CustomerAddress", "Transactions" and "NewCustomerList".
 
-# Data Pre-processing:
+  # Data Pre-processing:
 
-A data framework was used to identify all data quality issues from the datasets provided. The table below shows some data quality issues that I discovered during my assessment of the three datasets. The column header was used to fill in the data framework in relation to each datasset. I have also made some recommendation to improve the quality of the dataset for better analysis and good business decision-making.
+  A data framework was used to identify all data quality issues from the datasets provided. The table below shows some data quality issues that I discovered during my  assessment of the three datasets. The column header was used to fill in the data framework in relation to each datasset. I have also made some recommendation to improve the quality of the dataset for better analysis and good business decision-making.
 
 ![a1](https://user-images.githubusercontent.com/105908253/236497897-55287ecd-5036-4a07-8b8f-83378df0f55d.jpg)
 
@@ -80,11 +80,13 @@ Recommendation: Set up columns so that format or data types such as price or dat
 The above summary are the data quality issues discovered, mitigations and recommendations. Taking all these into account will improve the quality our data and increase the efficiency of our analysis for good business decision-making. 
 
 
+
 # MODEL DEVELOPMENT & ANALYSIS
 
 This Model was developed using RFM Analysis. This analysis is a marketing technique used to quantitatively rank and group customers based on the recency, frequency, and monetary total of their recent transactions to identify the best customers and perform targeted marketing campaigns.
 
-# Recency: This dimension refers to the time elapsed since a customer's last purchase. It measures how recently a customer has interacted with a business.
+# Recency: 
+This dimension refers to the time elapsed since a customer's last purchase. It measures how recently a customer has interacted with a business.
 To combine the three datasets, I had to find a relationship that exist between the datasets. The customer_Id was used as a primary key since it’s a unique identifier.
 
 ![b1](https://user-images.githubusercontent.com/105908253/236502878-169dbf11-f4fe-4b33-b639-490b96400a5c.jpg)
