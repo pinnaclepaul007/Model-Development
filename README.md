@@ -38,7 +38,7 @@ The descriptions of data quality issues discovered, and the methods of mitigatio
 * Mitigation: filter out outlier in DOB.
 * Recommendation: Create an age column to be able to check for errors. Create profit column in Transaction for accuracy of sales and it will assist in future monetary analysis.
 
-2. *Data Incompleteness*
+2. *Data Completeness*
 
 * Customer ID were inconsistent among Customer Demographic, Transaction and Customer Address.
 * Mitigation: Filter all customer ids from 1 – 3500. Filter out blank cells.
@@ -52,13 +52,13 @@ The descriptions of data quality issues discovered, and the methods of mitigatio
 
 4. *Data Currency*
 
-* ‘Y’ customer in Deceased Indicator under Customer Demographic is not for current customer.
+* The ‘Y’ in the Deceased column on Customer Demographic table indicate that the customer is dead.
 * Mitigation: Filter out ‘Y’ in Deceased Indicator.
 * Recommendation: Deceased customers are not current customer, removing them will increase the efficiency and currency of the data and will improve the accuracy of our analysis. 
 
 5. *Data Relevancy*
 
-* Lack of relevancy for Default column in Customer Demographic.
+* The Default column on Customer Demographic table is irrelevant.
 * Mitigation: Default column deleted.
 * Recommendation: Check and double check for irrelevant and incomprehensible data to be deleted or removed.
 
@@ -149,6 +149,6 @@ At the end of my analysis. I successfully identified the high-value customers fr
 By analyzing and combining these three dimensions, businesses can create customer segments that can help identify different groups with varying levels of engagement, loyalty, and profitability. These segments can then be used to tailor marketing strategies, personalize communication, allocate resources effectively, and engage customers based on their purchasing behavior.
 
 
-Thank you for reading. I hope you find it more insightful.
+Thank you for reading. I hope you find it very insightful.
 
-You can reach me on twitter [@pinnacle_paul](https://twitter.com/pinnacle_paul) and on linkedIn [@Paul Aderounmu](https://www.linkedin.com/in/pauladerounmu/)
+You can reach out to me via twitter [@pinnacle_paul](https://twitter.com/pinnacle_paul) and linkedIn [@Paul Aderounmu](https://www.linkedin.com/in/pauladerounmu/)
