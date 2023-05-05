@@ -32,13 +32,13 @@ A data framework was used to identify all data quality issues from the datasets 
 
 The descriptions of data quality issues discovered, and the methods of mitigation used are briefly discussed below. In addition, recommendation and explanations are included to avoid further data quality issues in the future.
 
-1. # Accuracy
+1. *Accuracy*
 
 * DOB was inaccurate for Customer Demographic, age column missing and profit column missing for Transactions.
 * Mitigation: filter out outlier in DOB.
 * Recommendation: Create an age column to be able to check for errors. Create profit column in Transaction for accuracy of sales and it will assist in future monetary analysis.
 
-2 Incompleteness
+2. # Incompleteness #
 
 * Customer ID were inconsistent among Customer Demographic, Transaction and Customer Address.
 * Mitigation: Filter all customer ids from 1 – 3500. Filter out blank cells.
@@ -50,19 +50,19 @@ The descriptions of data quality issues discovered, and the methods of mitigatio
 * Mitigation: Filter all ‘M’ to Male and all ‘F and Female’ to Female for Gender. Filter New South Wales to NSW and Victoria to VIC for State.
 * Recommendation: Create a dropdown option for state abbreviation. Create a dropdown option for gender.
 
-4 #Currency#
+4. *Currency*
 
 * ‘Y’ customer in Deceased Indicator under Customer Demographic is not for current customer.
 * Mitigation: Filter out ‘Y’ in Deceased Indicator.
 * Recommendation: Deceased customers are not current customer, removing them will increase the efficiency and currency of the data and will improve the accuracy of our analysis. 
 
-5 Relevancy 
+5. *Relevancy*
 
 * Lack of relevancy for Default column in Customer Demographic.
 * Mitigation: Default column deleted.
 * Recommendation: Check and double check for irrelevant and incomprehensible data to be deleted or removed.
 
-6. Validity
+6. *Validity*
 
 * Format List price and Product first sold date in Transaction.
 * Mitigation: Format (Data type) List_Price to currency and Product_first_sold_date to short date.
